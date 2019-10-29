@@ -1,0 +1,65 @@
+const { Builder, By, Key, until } = require('selenium-webdriver')
+const assert = require('assert')
+
+const testHelper = require('./testHelper')
+
+describe('headless-example', function() {
+  this.timeout(30000)
+  let driver
+  let vars
+  before(async function() {
+      driver = await testHelper.before()
+  })
+  after(async function() {
+    await driver.quit();
+  })
+  beforeEach(async function() {
+  })
+  afterEach(async function() {
+  })
+  it('add/remove', async function() {
+    await driver.get("http://the-internet.herokuapp.com/")
+    await driver.findElement(By.linkText("Add/Remove Elements")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".example > button")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually:nth-child(1)")).click()
+    await driver.findElement(By.css(".added-manually")).click()
+  })
+
+})
